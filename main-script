@@ -60,7 +60,7 @@ local Slider = Tab:CreateSlider({
 })
 
 local Button = Tab:CreateButton({
-   Name = "Dances ( Press Comma )",
+   Name = "Fe Dances ( Press Comma )",
    Callback = function()
         --keybind to open is comma
 --made by Gi#7331
