@@ -1,0 +1,112 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Universal Shark",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "🦈 Universal Shark V2",
+   LoadingSubtitle = "Version 2.0.1, Made With 💗",
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   ToggleUIKeybind = "B", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = UniversalShark, -- Create a custom folder for your hub/game
+      FileName = "Config"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Key System",
+      Subtitle = "The Key Can Be Obtainted In Our Discord Server!",
+      Note = "Currently Universal Shark Isn't Released.", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"a"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+Rayfield:Notify({
+   Title = "🦈 Universal Shark Has Been Sucesfully Executed!",
+   Content = "Thanks For Using Universal Shark!",
+   Duration = 10,
+   Image = "sparkles",
+})
+
+local Tab = Window:CreateTab("🧑 Player") -- Title, Image
+
+local Section = Tab:CreateSection("Movement")
+
+local Slider = Tab:CreateSlider({
+   Name = "Speed",
+   Range = {16, 240},
+   Increment = 1,
+   Suffix = "speed",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(v)
+                game.Player.LocalPlayer.Character.Humanoid.WalkSpeed = v
+        end,
+})
+
+local Tab = Window:CreateTab("🌏 Universal") -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Orca",
+   Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Infinite Yield",
+   Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+        Rayfield:Notify({
+   Title = "Infinity Yield Has Been Loaded",
+   Content = "The Big Dawg Of Admin Scripts!",
+   Duration = 10,
+   Image = "infinity",
+})
+
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "UNC Test",
+   Callback = function()
+        loadstring(game:HttpGet("https://github.com/ltseverydayyou/uuuuuuu/blob/main/UNC%20test?raw=true"))()
+   end,
+})
+
+local Tab = Window:CreateTab("⚙️ Settings") -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Unload Universal Shark",
+   Callback = function()
+           Rayfield:Notify({
+   Title = "Universal Shark Has Been Unloaded!",
+   Content = "Cya Next Time! Your Settings Have Been Saved!",
+   Duration = 14,
+   Image = "check",
+})
+wait(5)
+        Rayfield:Destroy()
+
+   end,
+})
+
+
+
+Rayfield:LoadConfiguration()
