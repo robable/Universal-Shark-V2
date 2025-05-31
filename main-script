@@ -4,7 +4,7 @@ local Window = Rayfield:CreateWindow({
    Name = "Universal Shark",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "🦈 Universal Shark V2",
-   LoadingSubtitle = "Version 2.0.5, Made With 💗",
+   LoadingSubtitle = "Version 2.0.6, Made With 💗",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    ToggleUIKeybind = "B", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
@@ -750,6 +750,21 @@ local Button = Tab:CreateButton({
    end,
 })
 
+local Tab = Window:CreateTab("🐲 Blox Fruits") -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Script 1",
+   Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Script 2",
+   Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
+   end,
+})
 
 local Tab = Window:CreateTab("⚙️ Settings") -- Title, Image
 
@@ -768,6 +783,8 @@ wait(2.5)
    end,
 })
 
+local Tab = Window:CreateTab("📜 Credits") -- Title, Image
 
+local Paragraph = Tab:CreateParagraph({Title = "Credits", Content = "・Owner - coldgold"})
 
 Rayfield:LoadConfiguration()
