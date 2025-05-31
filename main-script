@@ -4,7 +4,7 @@ local Window = Rayfield:CreateWindow({
    Name = "Universal Shark",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "🦈 Universal Shark V2",
-   LoadingSubtitle = "Version 2.0.7, Made With 💗",
+   LoadingSubtitle = "Version 2.0.8, Made With 💗",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    ToggleUIKeybind = "B", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
