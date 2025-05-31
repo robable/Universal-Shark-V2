@@ -60,7 +60,7 @@ local Slider = Tab:CreateSlider({
 })
 
 local Button = Tab:CreateButton({
-   Name = "Fe Dances ( Press Comma )",
+   Name = "*Keyless* Fe Dances ( Press Comma )",
    Callback = function()
         --keybind to open is comma
 --made by Gi#7331
@@ -724,7 +724,7 @@ local Button = Tab:CreateButton({
 local Tab = Window:CreateTab("🌱 Grow A Garden") -- Title, Image
 
 local Button = Tab:CreateButton({
-   Name = "Script 1",
+   Name = "*Keyless* Script 1",
    Callback = function()
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
 
@@ -744,7 +744,7 @@ end
 local Tab = Window:CreateTab("🏐 Blade Ball") -- Title, Image
 
 local Button = Tab:CreateButton({
-   Name = "Script 1",
+   Name = "*Keyless* Script 1",
    Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/kidshop4/scriptbladeballk/main/bladeball.lua"))()
    end,
@@ -753,16 +753,25 @@ local Button = Tab:CreateButton({
 local Tab = Window:CreateTab("🐲 Blox Fruits") -- Title, Image
 
 local Button = Tab:CreateButton({
-   Name = "Script 1",
+   Name = "*Keyless* Script 1",
    Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
    end,
 })
 
 local Button = Tab:CreateButton({
-   Name = "Script 2",
+   Name = "*Keyless* Script 2 ( Only Work's On The Best Executors )",
    Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
+   end,
+})
+
+local Tab = Window:CreateTab("🎯 Rivals") -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Script 1 ( I Didn't Test This One So It Might Not Work. )",
+   Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/luascriptsROBLOX/Xerar/refs/heads/main/RivalsxeraPBF"))()
    end,
 })
 
