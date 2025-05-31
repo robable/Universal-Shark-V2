@@ -695,7 +695,7 @@ local Tab = Window:CreateTab("🔫 Aim") -- Title, Image
 local Button = Tab:CreateButton({
    Name = "*Keyless* Hitbox Expander",
    Callback = function()
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubMurdervssheriff"))()
    end,
 })
 
