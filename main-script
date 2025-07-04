@@ -730,6 +730,18 @@ local Button = Tab:CreateButton({
    end,
 })
 
+local Tab = Window:CreateTab("🚪 Doors") -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "*Keyless* Bobhub",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
+
+local Button = Tab:CreateButton({
+   Name = "MS Paint",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
+
 local Tab = Window:CreateTab("🌱 Grow A Garden") -- Title, Image
 
 local Button = Tab:CreateButton({
